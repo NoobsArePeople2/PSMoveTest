@@ -39,6 +39,7 @@ This setup was done on Mac OS 10.10.4 on a mid-2011 13" MacBook Air.
   3. Run the `psmovepair` utility in the `{psmoveapi}/build/` folder.
   4. Press the "PS" button on the Move controller to connect via Bluetooth.
   5. Hope and pray. In the Bluetooth menu you should see "Motion Controller" in the Devices list.
+  6. [This thread](http://steamcommunity.com/app/277850/discussions/0/626329820906864290/?insideModal=1#c612823460262763640) has a nice discussion of connection troubleshooting options.
 5. Run the UniMove test scene.
 
 

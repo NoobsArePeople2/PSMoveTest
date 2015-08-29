@@ -84,7 +84,7 @@ public class UniMoveTest : MonoBehaviour
 
 			// This example program only uses Bluetooth-connected controllers
 			PSMoveConnectionType conn = move.ConnectionType;
-			if (conn == PSMoveConnectionType.Unknown)// || conn == PSMoveConnectionType.USB)
+			if (conn == PSMoveConnectionType.Unknown || conn == PSMoveConnectionType.USB)
 			{
 				Destroy(move);
 			}

@@ -16,9 +16,9 @@ public class MoveController : MonoBehaviour {
 
 	public void SetLED(Color color)
 	{
-		sphereLight.enabled = color != Color.black;
-		sphereRenderer.material.color = color == Color.black ? Color.white * 0.2f : color;
-		sphereLight.color = color;
-		sphereLight.intensity =  color.grayscale * 4;
+//		sphereLight.enabled = color != Color.black;
+//		sphereRenderer.material.color = color == Color.black ? Color.white * 0.2f : color;
+//		sphereLight.color = color;
+//		sphereLight.intensity =  color.grayscale * 4;
 	}
 }

@@ -37,7 +37,7 @@ using System.Collections.Generic;
 public class UniMoveTest : MonoBehaviour
 {
 	// This is the (3d object prototype in the scene)
-	private GameObject moveControllerPrefab;
+	public GameObject MoveController;
 
 	// We save a list of Move controllers.
 	private List<UniMoveController> moves = new List<UniMoveController>();
@@ -58,9 +58,9 @@ public class UniMoveTest : MonoBehaviour
 		 */
 		Time.maximumDeltaTime = 0.1f;
 
-		moveControllerPrefab = GameObject.Find("MoveController");
-		Destroy(moveControllerPrefab);
-		if(moveControllerPrefab == null || moveControllerPrefab.GetComponent<MoveController>() == null)
+//		MoveController = GameObject.Find("MoveController");
+		Destroy(MoveController);
+		if(MoveController == null || MoveController.GetComponent<MoveController>() == null)
 			Debug.LogError("GameObject with object named \"MoveController\" with script MoveController is missing from the scene");
 
 
@@ -101,7 +101,7 @@ public class UniMoveTest : MonoBehaviour
 				move.SetLED(Color.white);
 
 				// adding the MoveController Objects on screen
-				GameObject moveController = GameObject.Instantiate(moveControllerPrefab,
+				GameObject moveController = GameObject.Instantiate(MoveController,
 					Vector3.right * count * 2 +  Vector3.left * i * 4, Quaternion.identity) as GameObject;
 				MoveController moveObj = moveController.GetComponent<MoveController>();
 				moveObjs.Add(moveObj);
